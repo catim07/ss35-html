@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eggplant</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <form onsubmit="add(event)" style="display: flex; flex-direction: column; align-items: center;">
+        <h1>Danh sách sinh viên Rikkei</h1>
+        <div style="display: flex;">
+            <label for="name">tên nhân viên</label>
+            <input type="text" name="name" id="name">
+            <label for="
+position">Chức vụ</label>
+            <input type="text" name="position" id="position">
+        </div>
+        <button style="margin-top: 20px;" type="submit" class="btn btn-success">thêm nhân viên</button>
+        <div>
+            <table class="table" style="width: 550px;">
+                <thead>
+                    <tr>
+                        <th scope="col">STT</th>
+                        <th scope="col">Tên</th>
+                        <th scope="col">Chức vụ</th>
+                    </tr>
+                </thead>
+                <tbody id="links">
+                    <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                  </tr> -->
+                </tbody>
+            </table>
+            <div id="paginButtom" style="display: flex; gap: 10px;justify-content: center;">
+                <!-- <button type="button" class="btn btn-outline-primary">Previous</button>
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-outline-primary">Next</button> -->
+            </div>
+        </div>
+    </form>
+    <script src="./index.js"></script>
+</body>
+
+</html>

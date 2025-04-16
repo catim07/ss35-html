@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Danh mục sản phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .status-active {
+            color: green;
+            font-weight: 500;
+        }
+
+        .status-inactive {
+            color: red;
+            font-weight: 500;
+        }
+
+        .badge-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .dot-active {
+            background: green;
+        }
+
+        .dot-inactive {
+            background: red;
+        }
+    </style>
+</head>
+
+<body class="container my-4">
+
+    <h4 class="fw-bold mb-4">Danh mục</h4>
+    <div class="row mb-3">
+        <div class="col-md-3">
+            <select id="statusFilter" class="form-select" onchange="renderTable()">
+                <option value="all">Tất cả</option>
+                <option value="active">Đang hoạt động</option>
+                <option value="inactive">Ngừng hoạt động</option>
+            </select>
+        </div>
+        <div class="col-md-5">
+            <input type="text" class="form-control" id="searchInput" placeholder="Tìm kiếm danh mục theo tên"
+                oninput="renderTable()">
+        </div>
+        <div class="col-md-4 text-end">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">Thêm mới danh mục</button>
+        </div>
+    </div>
+    <table class="table table-bordered align-middle text-center">
+        <thead class="table-light">
+            <tr>
+                <th>Mã danh mục</th>
+                <th>Tên danh mục</th>
+                <th>Trạng thái</th>
+                <th>Chức năng</th>
+            </tr>
+        </thead>
+        <tbody id="categoryTable">
+        </tbody>
+    </table>
+
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+
+</html>
